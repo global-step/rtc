@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.time {
+  background: #1e87e9;
+  color: #fff;
+  font-family: helvetica;
+  font-size: 24px;
+  margin-top: 0;
+  padding: 20px;
+}
+
+.spaces{
+  font-size: 20px;
+}
+
+button{
+  border: 0;
+  background: #1d87e9;
+  color: #fff;
+  font-size: 28px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+button:hover{filter: brightness(1.2)}
+button:disabled{
+  background: #cccccc;
+  pointer-events: none;
+}
+
