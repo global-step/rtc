@@ -1,7 +1,43 @@
 const io = require('socket.io')();
 let spaces = 3;
+let classes = [
+    {
+        title: 'Maths',
+        spaces: 3,
+        start: 10 
+    },
+    {
+        title: 'English',
+        spaces: 4,
+        start: 11
+    },
+    {
+        title: 'History',
+        spaces: 2,
+        start: 11 
+    },
+    {
+        title: 'Biology',
+        spaces: 5,
+        start: 12
+    },
+    {
+        title: 'English',
+        spaces: 3,
+        start: 12 
+    },
+    {
+        title: 'Physics',
+        spaces: 5,
+        start: 14 
+    },
+    {
+        title: 'Japanese',
+        spaces: 5,
+        start: 14
+    }
+]
 io.on('connection', (client) => {
-    // here you can start emitting events to the client 
     client.on('subscribeToTimer', (interval) => {
         console.log('client is subscribing to timer with interval ', interval);
         setInterval(() => {
@@ -12,6 +48,12 @@ io.on('connection', (client) => {
         console.log('client is subscribing to spaces with interval ', interval);
         setInterval(() => {
             client.emit('spaces', spaces);
+        }, interval);
+    });
+    client.on('subscribeToClasses', (interval) => {
+        console.log('client is subscribing to classes with interval ', interval);
+        setInterval(() => {
+            client.emit('classes', classes);
         }, interval);
     });
     client.on('emitToSpaces', () => {

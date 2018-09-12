@@ -1,0 +1,7 @@
+<h1>Please Sign in</h1>
+
+<ul class="signin">
+  <% @users.each do |user| %>
+    <li><button class="btn btn-success"><%= link_to user.name, session_url(user_id: user.id), method: :post %></button></li>
+  <% end %>
+</ul>

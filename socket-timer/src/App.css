@@ -9,8 +9,16 @@
   font-size: 24px;
   margin-top: 0;
   padding: 20px;
+  margin-bottom: 0;
 }
-
+.class{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 20px;
+}
+.title{width: 90px;}
 .spaces{
   font-size: 20px;
 }

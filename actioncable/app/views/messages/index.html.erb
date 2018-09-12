@@ -1,0 +1,7 @@
+<h1>Classes</h1>
+<button class="btn btn-primary"><%= link_to 'Logout', session_path, method: :delete %></button> 
+<ul class="lessons">
+  <% @messages.each do |message| %>
+    <li><button class="btn btn-success"><%= link_to message.title, message %></button></li>
+  <% end %>
+</ul>

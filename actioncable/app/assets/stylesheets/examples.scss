@@ -1,0 +1,65 @@
+// Place all the styles related to the Examples controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    text-align: center;
+    margin: 80px;
+    position: relative;
+}
+
+ ul{
+     list-style: none;
+     padding-left: 0;
+     li{
+         
+     }
+ }
+ .btn a{
+     color: #fff;
+ }
+ .btn-primary, .back{
+     position: absolute;
+     top: -50px;
+     right: 0;
+ }
+ .back{right: 85px}
+ .signin, .lessons{
+     padding-top: 20px;
+     .btn{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+ } 
+ .submit{
+    display: block;
+    width: 422px;
+    margin: -12px auto;
+    padding-top: 10px;
+    background: #09b5ef;
+    border: 1px solid #09b5ef;
+    color: #fff;
+ }
+ textarea{
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #09b5ef;
+}
+#comments{
+    width: 422px;
+    margin: 40px auto 0;
+    border: 1px solid #09b5ef;
+    border-bottom: 0;
+    border-radius: 5px;
+    text-align: left;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: -5px;
+    article{
+        padding: 20px;
+        color: #09b5ef;
+        &:nth-of-type(even){
+            background: #09b5ef;
+            color: #fff;
+        }
+    }
+}
