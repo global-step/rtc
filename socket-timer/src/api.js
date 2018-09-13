@@ -13,8 +13,8 @@ function subscribeToClasses(interval, cb) {
     socket.on('classes', classes => cb(null, classes));
     socket.emit('subscribeToClasses', interval);
 }
-function emitToSpaces(cb) {
+function emitToSpaces(i, cb) {
     socket.on('emitToSpaces', spaces => cb(null, spaces));
-    socket.emit('emitToSpaces');
+    socket.emit('emitToSpaces', i);
 }
 export { subscribeToTimer, subscribeToSpaces, subscribeToClasses, emitToSpaces }

@@ -4,36 +4,43 @@ let classes = [
     {
         title: 'Maths',
         spaces: 3,
+        taken: 0,
         start: 10 
     },
     {
         title: 'English',
         spaces: 4,
+        taken: 0,
         start: 11
     },
     {
         title: 'History',
         spaces: 2,
+        taken: 0,
         start: 11 
     },
     {
         title: 'Biology',
         spaces: 5,
+        taken: 0,
         start: 12
     },
     {
-        title: 'English',
+        title: 'Robotics',
         spaces: 3,
+        taken: 0,
         start: 12 
     },
     {
         title: 'Physics',
         spaces: 5,
+        taken: 0,
         start: 14 
     },
     {
         title: 'Japanese',
         spaces: 5,
+        taken: 0,
         start: 14
     }
 ]
@@ -56,8 +63,9 @@ io.on('connection', (client) => {
             client.emit('classes', classes);
         }, interval);
     });
-    client.on('emitToSpaces', () => {
-        spaces = spaces -1
+    client.on('emitToSpaces', (i) => {
+        console.log(i)
+        classes[i].taken = classes[i].taken + 1
     });
 });
 function timeStamp() {
