@@ -63,3 +63,19 @@ body{
         }
     }
 }
+
+// $total: 8;
+// @function column-width($col) {  
+//  @return percentage($col/$total);  
+// }
+// @for $i from 1 through $total {  
+//  .col-#{$i} { width: column-width($i) };  
+// }
+
+// $total: 7;
+// @function hue($row) {  
+//  @return hue-rotate($row + deg);  
+// }
+// @for $i from 1 through $total {  
+//  .col-#{$i} { filter: hue($i) };  
+// }

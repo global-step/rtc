@@ -28,7 +28,7 @@
 .nav hr{border-color: #1d87e9;}
 h1{color: #1d87e9}
 .time {
-  background: #1e87e9;
+  background: hsl(340, 90%, 48%);
   color: #fff;
   font-family: helvetica;
   font-size: 24px;
@@ -40,14 +40,46 @@ h1{color: #1d87e9}
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 1px solid #f1f1f1;
-  padding: 20px;
+  padding: 14px;
 }
-.title{width: 90px;}
+.class:nth-of-type(1){border-bottom: 1px solid hsl(340, 90%, 48%); }
+.class:nth-of-type(2){border-bottom: 1px solid hsl(310, 90%, 48%); }
+.class:nth-of-type(3){border-bottom: 1px solid hsl(280, 90%, 48%); }
+.class:nth-of-type(4){border-bottom: 1px solid hsl(250, 90%, 48%); }
+.class:nth-of-type(5){border-bottom: 1px solid hsl(220, 90%, 48%); }
+.class:nth-of-type(6){border-bottom: 1px solid hsl(190, 90%, 48%); }
+.class:nth-of-type(7){border-bottom: 1px solid hsl(160, 90%, 48%); }
+
+.title{width: 120px; margin: 0;}
+.title svg{    
+  display: block;
+  text-align: center;
+  margin: 7px auto;
+  font-size: 32px;
+}
+.title svg path{fill: #1e87e9;}
+.class:nth-of-type(1) .title svg path{fill: hsl(340, 90%, 48%);}
+.class:nth-of-type(2) .title svg path{fill: hsl(310, 90%, 48%);}
+.class:nth-of-type(3) .title svg path{fill: hsl(280, 90%, 48%);}
+.class:nth-of-type(4) .title svg path{fill: hsl(250, 90%, 48%);}
+.class:nth-of-type(5) .title svg path{fill: hsl(220, 90%, 48%);}
+.class:nth-of-type(6) .title svg path{fill: hsl(190, 90%, 48%);}
+.class:nth-of-type(7) .title svg path{fill: hsl(160, 90%, 48%);}
 .spaces{
   font-size: 20px;
+  /* background: crimson; */
+  color: #fff;
+  padding: 12px 10px;
+  border-radius: 50%;
 }
-
+.class:nth-of-type(1) .spaces{background: hsl(340, 90%, 48%);}
+.class:nth-of-type(2) .spaces{background: hsl(310, 90%, 48%);}
+.class:nth-of-type(3) .spaces{background: hsl(280, 90%, 48%);}
+.class:nth-of-type(4) .spaces{background: hsl(250, 90%, 48%);}
+.class:nth-of-type(5) .spaces{background: hsl(220, 90%, 48%);}
+.class:nth-of-type(6) .spaces{background: hsl(190, 90%, 48%);}
+.class:nth-of-type(7) .spaces{background: hsl(160, 90%, 48%);}
+.start{font-size: 20px;}
 button, .join{
   border: 0;
   background: #1d87e9;
@@ -56,7 +88,8 @@ button, .join{
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  width: 220px;
+  width: 200px;
+  box-sizing: border-box;
   transition: .3s ease-in-out;
   text-decoration: none;
 }
@@ -64,6 +97,13 @@ button, .join{
   background: #0dd888;
   /* display: none; */
 }
+.class:nth-of-type(1) .join{background: hsl(340, 90%, 48%);}
+.class:nth-of-type(2) .join{background: hsl(310, 90%, 48%);}
+.class:nth-of-type(3) .join{background: hsl(280, 90%, 48%);}
+.class:nth-of-type(4) .join{background: hsl(250, 90%, 48%);}
+.class:nth-of-type(5) .join{background: hsl(220, 90%, 48%);}
+.class:nth-of-type(6) .join{background: hsl(190, 90%, 48%);}
+.class:nth-of-type(7) .join{background: hsl(160, 90%, 48%);}
 button:hover, .join:hover, .home a:hover{filter: brightness(1.2)}
 button:disabled{
   background: #cccccc;

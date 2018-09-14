@@ -5,43 +5,50 @@ let classes = [
         title: 'Maths',
         spaces: 3,
         taken: 0,
-        start: 10 
+        start: 10,
+        icon: 'calculator' 
     },
     {
         title: 'English',
         spaces: 4,
         taken: 0,
-        start: 11
+        start: 11,
+        icon: 'language' 
     },
     {
         title: 'History',
         spaces: 2,
         taken: 0,
-        start: 11 
+        start: 11,
+        icon: 'landmark'  
     },
     {
         title: 'Biology',
         spaces: 5,
         taken: 0,
-        start: 12
+        start: 12,
+        icon: 'frog' 
     },
     {
         title: 'Robotics',
         spaces: 3,
         taken: 0,
-        start: 12 
+        start: 12,
+        icon: 'robot'  
     },
     {
         title: 'Physics',
         spaces: 5,
         taken: 0,
-        start: 14 
+        start: 14,
+        icon: 'rocket'  
     },
     {
         title: 'Japanese',
         spaces: 5,
         taken: 0,
-        start: 14
+        start: 14,
+        icon: 'torii-gate' 
     }
 ]
 io.on('connection', (client) => {
