@@ -1,0 +1,21 @@
+
+<h1>Classes</h1>
+<%= link_to 'New Class', new_gsa_class_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Spaces</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @classes.each do |gsa_class| %>
+    <tr>
+      <td><%= link_to gsa_class.title, gsa_class_path(gsa_class) %></td>
+      <td><%= gsa_class.spaces %></td>
+      <td><%= link_to 'Edit', edit_gsa_class_path(gsa_class) %></td>
+      <td><%= link_to 'Destroy', gsa_class_path(gsa_class),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
