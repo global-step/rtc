@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Group Lessons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Status</th>
+      <th>Program</th>
+      <th>Start</th>
+      <th>Spaces</th>
+      <th>Duration</th>
+      <th>Google calendar event</th>
+      <th>Lesson</th>
+      <th>Teachable within 24h</th>
+      <th>Class ID</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_lessons.each do |group_lesson| %>
+      <tr>
+        <td><%= group_lesson.teacher_id %></td>
+        <td><%= group_lesson.status %></td>
+        <td><%= group_lesson.program_id %></td>
+        <td><%= group_lesson.start.strftime("%l:%M%p ") %></td>
+        <!-- <td><%= group_lesson.start.strftime("%l:%M%p - %a %e ") %></td> -->
+        <td>0/<%= group_lesson.max_seat %></td>
+        <td><%= group_lesson.duration %></td>
+        <td><%= group_lesson.google_calendar_event_id %></td>
+        <td><%= group_lesson.lesson_id %></td>
+        <td><%= group_lesson.teachable_within_24h %></td>
+        <td><%= group_lesson.gsa_class_id %></td>
+        <td><%= link_to 'Book', group_lesson %></td>
+        <td><%= link_to ("<button>Join</button>").html_safe, "https://hangouts.google.com/call/#{group_lesson.google_calendar_event_id}", target: "_blank" %></td>
+        <!-- <td><%= link_to 'Show', group_lesson %></td>
+         <td><%= link_to 'Destroy', group_lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         
+         <%= link_to 'New Group Lesson', new_group_lesson_path %>
+         
+          -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

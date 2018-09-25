@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @group_lesson.teacher_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @group_lesson.status %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @group_lesson.program_id %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @group_lesson.start %>
+</p>
+
+<p>
+  <strong>Max seat:</strong>
+  <%= @group_lesson.max_seat %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @group_lesson.duration %>
+</p>
+
+<p>
+  <strong>Google calendar event:</strong>
+  <%= @group_lesson.google_calendar_event_id %>
+</p>
+
+<p>
+  <strong>Lesson:</strong>
+  <%= @group_lesson.lesson_id %>
+</p>
+
+<p>
+  <strong>Teachable within 24h:</strong>
+  <%= @group_lesson.teachable_within_24h %>
+</p>
+
+<p>
+  <strong>Gsa class:</strong>
+  <%= @group_lesson.gsa_class_id %>
+</p>
+
+<%= link_to 'Edit', edit_group_lesson_path(@group_lesson) %> |
+<%= link_to 'Back', group_lessons_path %>
