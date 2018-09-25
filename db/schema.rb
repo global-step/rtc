@@ -13,25 +13,25 @@
 ActiveRecord::Schema.define(version: 2018_09_25_014757) do
 
   create_table "group_lessons", force: :cascade do |t|
-    t.integer "teacher_id"
-    t.integer "status"
-    t.integer "program_id"
-    t.datetime "start"
-    t.integer "max_seat"
-    t.integer "duration"
-    t.string "google_calendar_event_id"
-    t.integer "lesson_id"
-    t.boolean "teachable_within_24h"
-    t.integer "gsa_class_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer   "teacher_id"
+    t.integer   "status"
+    t.integer   "program_id"
+    t.datetime  "start"
+    t.integer   "max_seat"
+    t.integer   "duration"
+    t.string    "google_calendar_event_id"
+    t.integer   "lesson_id"
+    t.boolean   "teachable_within_24h"
+    t.integer   "gsa_class_id"
+    t.datetime  "created_at", null: false
+    t.datetime  "updated_at", null: false
   end
 
   create_table "gsa_classes", force: :cascade do |t|
-    t.string "title"
-    t.integer "spaces"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string    "title"
+    t.integer   "spaces"
+    t.datetime  "created_at", null: false
+    t.datetime  "updated_at", null: false
   end
 
 end

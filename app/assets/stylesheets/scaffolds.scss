@@ -92,6 +92,8 @@ button{
   color: #fff;
   font-size: 14px;
   border-radius: 4px;
+  text-transform: uppercase;
+  min-width: 100px;;
   transition: .3s ease-in-out;
   &:hover{cursor: pointer; filter: brightness(1.1)}
 }

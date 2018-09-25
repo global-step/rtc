@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Group Lessons</h1>
+<h1>GSA Online - Group Lessons</h1>
 
 <table>
   <thead>
@@ -33,7 +33,7 @@
         <td><%= group_lesson.lesson_id %></td>
         <td><%= group_lesson.teachable_within_24h %></td>
         <td><%= group_lesson.gsa_class_id %></td>
-        <td><%= link_to 'Book', group_lesson %></td>
+        <td><%= link_to ("<button>Reserve</button>").html_safe, group_lesson %></td>
         <td><%= link_to ("<button>Join</button>").html_safe, "https://hangouts.google.com/call/#{group_lesson.google_calendar_event_id}", target: "_blank" %></td>
         <!-- <td><%= link_to 'Show', group_lesson %></td>
          <td><%= link_to 'Destroy', group_lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>

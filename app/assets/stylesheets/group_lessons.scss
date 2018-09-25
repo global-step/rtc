@@ -2,7 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 table{
-    tr{border-color: antiquewhite}
+    border-spacing: 0;
+    tbody tr{
+        transition: .3s ease-in-out;
+        &:hover{
+            background: #fbfbfb;
+        }
+    }
     td, th{
         padding: 15px;
         text-align: left;
