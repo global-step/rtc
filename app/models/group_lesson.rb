@@ -11,14 +11,18 @@ class GroupLesson < ApplicationRecord
 
     queue.bind(exchange)
 
-    teacher_name = ''
+    lesson_params = {}
+    # teacher_params = {}
+    # program = ''
+    # lesson_title = ''
 
     puts ' [*] Waiting for logs. To exit press CTRL+BACKSLASH'
 
     begin
-    queue.subscribe(block: true) do |_delivery_info, _properties, body|
-        puts " [x] #{body}"
-        teacher_name = body
+    queue.subscribe(block: true) do |_delivery_info, _properties, lesson |
+        puts " [x] Received #{lesson}"
+
+        lesson_params = JSON.load(lesson).to_hash
         # CLOSE AFTER ONE
         channel.close
         connection.close
@@ -29,17 +33,20 @@ class GroupLesson < ApplicationRecord
     connection.close
     end
 
+    # create loop to create a new lesson for each lesson nested within the lesson hash
+    # currently just creating one
     GroupLesson.create!(
-        teacher_id: 4, 
-        status: 1, 
-        program_id: 3, 
-        start: '2018-09-27 14:45:00 UTC', 
-        max_seat: 2, 
-        duration: 25, 
-        google_calendar_event_id: teacher_name, 
-        lesson_id: 552, 
-        teachable_within_24h: true, 
-        gsa_class_id: 239
+        teacher_id:              lesson_params["id"],
+        teacher_name:            lesson_params["name"],
+        teacher_gender:          lesson_params["gender"],
+        program_title:           lesson_params["program"],
+        lesson_title:            lesson_params["lesson_title"],
+        status:                  lesson_params["program"],  
+        start:                   lesson_params["start"], 
+        max_seat:                lesson_params["max_seat"], 
+        duration:                lesson_params["duration"], 
+        teachable_within_24h:    lesson_params["teachable_within_24h"], 
+        google_calendar_event_id:lesson_params["google_calendar_event_id"]
     ) 
     # if teachable_within_24h = true
 
