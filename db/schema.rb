@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2018_09_25_014757) do
     t.datetime  "updated_at", null: false
   end
 
-  create_table "gsa_classes", force: :cascade do |t|
-    t.string    "title"
-    t.integer   "spaces"
-    t.datetime  "created_at", null: false
-    t.datetime  "updated_at", null: false
-  end
+  # create_table "gsa_classes", force: :cascade do |t|
+  #   t.string    "title"
+  #   t.integer   "spaces"
+  #   t.datetime  "created_at", null: false
+  #   t.datetime  "updated_at", null: false
+  # end
 
 end
