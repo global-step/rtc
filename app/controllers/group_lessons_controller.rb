@@ -5,6 +5,7 @@ class GroupLessonsController < ApplicationController
   # GET /group_lessons.json
   def index
     @group_lessons = GroupLesson.all
+    @group_lessons.fetch_lessons
   end
 
   # GET /group_lessons/1
